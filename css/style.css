@@ -1,0 +1,23 @@
+main img {
+    width: 400px;
+}
+body {
+background-color: rgb(231, 212, 183);
+
+}
+
+ h2 {
+    text-align: left;
+    padding: 30px;
+    
+}
+main {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 10px;
+    color: gray;
+}
+h1 {
+    text-align: left;
+    padding: 30px;
+}
