@@ -1,3 +1,33 @@
+img {
+    width: 800px;
+}
+
+
+header nav{
+    display: initial;
+    float: right;
+margin-top: 100px;
+margin-right: 100px;
+
+
+}
+header nav a {
+    margin-left: 20px;
+    border: 1px initial blueviolet;
+    padding: 10px;
+    text-decoration: none ;
+}
+
+main section {
+    border: 3px dotted blueviolet;
+    color: rgb(73, 104, 163);
+    text-decoration: cornflowerblue none;
+    display: inline-table;
+}
+ h1 {
+    margin-top: 10px;
+    font-size: xx-large;
+}
 main img {
     width: 400px;
 }
@@ -7,10 +37,16 @@ background-color: rgb(231, 212, 183);
 }
 
  h2 {
+     font-size: 30;
     text-align: left;
     padding: 30px;
     
 }
+table, th, td{   border: solid 2px rgb(53, 52, 85); 
+      border-spacing: 5px   }   
+
+    th, td{    background-color:rgba(224, 28, 54, 0);   }    
+   table{    width: 85%;    margin: auto;   }
 main {
     margin-bottom: 30px;
     margin-top: 30px;
@@ -18,6 +54,11 @@ main {
     color: gray;
 }
 h1 {
+    font-size: 30;
     text-align: left;
     padding: 30px;
+}
+
+ul{
+    display: flex;
 }
