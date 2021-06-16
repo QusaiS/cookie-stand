@@ -1,6 +1,8 @@
 'use strict';
 
-let parentElement = document.getElementById('salesdata');
+// let parentElement = document.getElementById('salesdata');
+let CityStore = document.getElementById('CityStore');
+
 let operatingHours=['6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm'];
 
 let locationDetailsArray=[];
@@ -80,7 +82,7 @@ function timeHeader(){
 
 
 function fillWithCookies(){
-  for (let i=0;i<5;i++){
+  for (let i=0;i<locationDetailsArray.length;i++){
     let trEl= document.createElement('tr');
     let thLocation= document.createElement('th');
     thLocation.textContent=locationDetailsArray[i].locationName;
@@ -121,4 +123,45 @@ for (let i=0; i<5; i++){
 LocationDetails.calculateAllStoresHourly();
 timeHeader();
 fillWithCookies();
+
+
+
+function cityShop (event){
+  event.preventDefault();
+  
+  let name = event.target.CityName.value;
+   let minimum = event.target.MinimumCustomer.value;
+  let max = event.target.MaximumCustomer.value;
+  let avg = event.target.AvaregeCustomer.value;
+  // console.log(event.target.CityName.value);
+
+   if (minimum > max){
+    console.log("min max");
+    
+    document.getElementById('minimumMessage').style.display = "block";
+    document.getElementById('minimumMessage').innerText = "error should Min value be less than Max value";
+    return;
+   }else{
+    document.getElementById('minimumMessage').style.display = "none";
+   }
+
+
+  let NewCity = new LocationDetails(name, minimum , max , avg , []
+    , [] , 0);
+
+  locationDetailsArray.push(NewCity);
+
+
+document.getElementById('salesdata').innerHTML = null;
+for (let i=0; i<locationDetailsArray.length; i++){
+  locationDetailsArray[i].calculateRandomCustomersHourly();
+  locationDetailsArray[i].calculateCookiesSalesHourly();
+}
+LocationDetails.calculateAllStoresHourly();
+timeHeader();
+fillWithCookies();
+}
+
+CityStore.addEventListener('submit',cityShop);
+
 
