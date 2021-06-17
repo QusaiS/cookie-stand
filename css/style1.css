@@ -18,27 +18,44 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "img nav";
     background: #FFC288;
-    float: left;
+    text-align: center;
     
 }
+ body {
+    margin: 0;
+    width: auto;
+    height: 100vh;
+}
+
+div {
+    width: 100vw;
+    height: 100vh;
+} 
+
 body{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-family: 'Roboto', sans-serif;  
 }
 
 
-
-
-
-
 header img {
     width: 175px;
     margin: 1rem auto auto 5rem;
 }
+table , td , th{
+    border: 1px solid rgb(194, 42, 42);
+}
 
+ td , th {
+    padding: 8px;
+    width: 50px;
+  
+
+}
 header nav a{
+    margin-top: 50px;
     margin-bottom: 10px;
-    margin-right: 80px;
+    margin-right: 130px;
     display: flex;
     float: right;
     text-decoration: none;
@@ -63,7 +80,7 @@ body h2{
       
     }
     section img {
-        width: 540px;
+        width: 600px;
     margin-left: 30%;
     margin-top: 30px;
 }
@@ -125,7 +142,7 @@ margin: 30px;
     opacity: 1;
     display: block;
     margin-left: auto;
-    margin-right: 38px;
+    margin-right: 40px;
     width: 35%;
      border-radius: 50%;
     padding: 40px;
